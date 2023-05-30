@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-server
+  config:
+    import: optional:configserver:http://localhost:8888
+  profiles:
+    active: eureka-server
+  cloud:
+    config:
+      uri: http://localhost:8888
+      label: label1
+      profile: eureka-server
